@@ -12,18 +12,24 @@ import { routing }        from './app.routing';
 import { BasicAuthInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+import { ChartComponent } from './chart/chart.component';
+//import { Chat2Component } from './chat2/chat2.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        routing
+        routing,
+        ChartsModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
-        LoginComponent
+        LoginComponent,
+        ChartComponent,
+        //Chat2Component
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true },

@@ -3,7 +3,6 @@ import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../_services';
 
 import {Role, User } from '../_models';
-//import { UserService } from '../_services';
 
 @Component({templateUrl: 'home.component.html'})
 export class HomeComponent {
@@ -16,7 +15,7 @@ export class HomeComponent {
         }
 
     get isStudent() {
-        return this.currentUser.role == Role.Student;
+        return this.currentUser.role == Role.Teacher;
     }
   
 }

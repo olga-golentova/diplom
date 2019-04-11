@@ -9,16 +9,6 @@ import { AuthenticationService } from './_services';
 })
 
 export class AppComponent { 
-     currentUser: User;
 
-    constructor(private authenticationService: AuthenticationService
-        ) 
-        {
-            this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-        }
-
-    get isStudent() {
-        return this.currentUser.role == Role.Student;
-    }
 }
 
