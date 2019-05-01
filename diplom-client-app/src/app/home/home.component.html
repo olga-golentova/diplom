@@ -1,10 +1,11 @@
 <h1>Home</h1>
-<p>You're logged in with Angular 6 & Basic HTTP Authentication!!</p>
+<p>You're logged in!</p>
 <div>
     
     <ul>
         <p>Your role is: <strong>{{currentUser.role}}</strong>.</p>
-        <p *ngIf="isStudent">Oh my gosffffff</p>
+        <p>{{currentUser}}</p>
+        <p *ngIf="isTeacher">here will be your menu</p>
     </ul>
 </div>
 <!-- <div>

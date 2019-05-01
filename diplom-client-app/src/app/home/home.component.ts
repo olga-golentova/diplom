@@ -15,7 +15,9 @@ export class HomeComponent {
         }
 
     get isStudent() {
-        return this.currentUser.role == Role.Teacher;
+        return this.currentUser.role == Role.Student;
     }
-  
+    ngOnInit(){
+        
+    }
 }
